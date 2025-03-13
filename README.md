@@ -52,14 +52,14 @@ Creates an Excel file from the extracted metadata and organizes it into a struct
 ## Output
 The script generates an 'Analysis' folder and a sub folder with the name of music directory and a sub-sub folder with current date as its folder name and an Excel file named `{Music_Directory_Name}_{Date}.xlsx` inside that directory.
 
-## License
-This project is open-source and available for modification.
-
 ## Example Output
 An example row in the output Excel file:
 | Sl.NO | Artist | Track | Album/Single/EP | Duration (Min) | Sample Rate | Source Bit Depth | Main AA EBU Max Momentary Loudness | Main AA EBU Top Of Loudness Range | Main AA ITU Sample Peak | Main AA ITU True Peak | Main AA EBU Max Short Term Loudness | Main AA EBU Loudness Range | Main AA ITU Loudness | Album AA EBU Max Momentary Loudness | Album AA EBU Top Of Loudness Range | Album AA ITU Sample Peak | Album AA ITU True Peak | Album AA EBU Max Short Term Loudness | Album AA EBU Loudness Range | Album AA ITU Loudness | SC Ave Perceived Power Coeff | SC Max Perceived Power Coeff | SC Peak Amplitude Msec | SC Max Perceived Power Msec | SC Peak Amplitude | Sound Check Volume Normalization Gain |
 |------|--------|-------|----------------|---------------|-------------|----------------|-----------------------------------|--------------------------------|------------------|----------------|-----------------------------------|----------------------------|----------------|-----------------------------------|--------------------------------|------------------|----------------|-----------------------------------|----------------------------|----------------|-----------------------------|-----------------------------|---------------------|----------------------|------------------|--------------------------------------|
 | 1 | Ado | 01 Show | Show - Single | 3.16 | 44100 Hz | 16 bit | 0.25 | -1.75 | 0 | 1.9375 | -1.25 | 4.75 | -3.75 | 0.25 | -1.75 | 0 | 1.9375 | -1.25 | 4.75 | -3.75 | "21737 22205" | "96187 116789" | "627 395" | "183298 98522" | "32768 32768" | -12.25 dB |
+
+## License
+This project is open-source and available for modification.
 
 ## Notes
 - There will be a `info.txt` file which can provide explanation to some of the Loudness parameters
