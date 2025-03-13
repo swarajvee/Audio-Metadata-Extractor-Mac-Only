@@ -66,3 +66,6 @@ An example row in the output Excel file:
 - The script is tested in m4p files in mac os Ventura, but can be modified if ```afinfo "path/to/song.extension"``` can give any song metadata
 - Ensure `afinfo` is available in your system's PATH.
 
+## Reference 
+- [Apple Digital Masters: Music as the Artist and Sound Engineer Intended](https://www.apple.com/apple-music/apple-digital-masters/docs/apple-digital-masters.pdf)
+
