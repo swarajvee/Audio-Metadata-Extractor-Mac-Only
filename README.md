@@ -3,6 +3,8 @@
 ## Description
 This script extracts metadata from audio files using `afinfo` and saves the data into an Excel file. It processes various attributes like file path, artist, album, track number, duration, sample rate, bit depth, and loudness parameters.
 
+I have written this script with an intension for analysing Loudness information of different songs
+
 ## Features
 - Extracts metadata from audio files using `afinfo`
 - Parses metadata including file type, track number, sample rate, bit depth, and loudness info
