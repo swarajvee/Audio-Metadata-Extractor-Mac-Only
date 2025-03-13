@@ -368,7 +368,7 @@ def Excel_Maker(metadata):
     print(f"{os.path.basename(file_path)} is saved in location {os.path.dirname(file_path)}")
         
 
-music_dir = "/Users/swarajv/Music/Music/Media.localized/Apple Music/Apple Music Top 100 UK"
+music_dir = input("Enter the Song Directory path: ")
 file_paths = glob.glob(f"{music_dir}/**/*.m4p", recursive=True)
 
 
