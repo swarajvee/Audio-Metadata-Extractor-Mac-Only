@@ -68,4 +68,5 @@ An example row in the output Excel file:
 
 ## Reference 
 - [Apple Digital Masters: Music as the Artist and Sound Engineer Intended](https://www.apple.com/apple-music/apple-digital-masters/docs/apple-digital-masters.pdf)
+- [Afinfo](https://ss64.com/mac/afinfo.html)
 
