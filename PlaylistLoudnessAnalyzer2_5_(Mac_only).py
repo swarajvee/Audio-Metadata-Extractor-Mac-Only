@@ -85,7 +85,7 @@ def parsed_data(af_out):
 
         if "Loudness Info:" in line:
             Loudness_Info = {}
-            i += 1
+            i += 1  # Move to next line
 
             while i < len(lines):
                 line = lines[i].strip()
@@ -135,7 +135,6 @@ def Excel_Maker(metadata):
     directory = f"Analysis/{base_dir}/{day}"
     current_path = ""
     for part in directory.split(os.sep):
-        print(part)
         current_path = os.path.join(current_path, part)
         if not os.path.exists(current_path):
             os.mkdir(current_path)
@@ -362,11 +361,14 @@ def Excel_Maker(metadata):
         column_letter = get_column_letter(a)
         sheet.column_dimensions[column_letter].width = 40
     
+    if os.path.exists(file_path):
+        os.remove(file_path)
+
     wb.save(file_path)
     print(f"{os.path.basename(file_path)} is saved in location {os.path.dirname(file_path)}")
         
 
-music_dir = input("Enter the Song Directory path: ")
+music_dir = "/Users/swarajv/Music/Music/Media.localized/Apple Music/Apple Music Top 100 UK"
 file_paths = glob.glob(f"{music_dir}/**/*.m4p", recursive=True)
 
 
