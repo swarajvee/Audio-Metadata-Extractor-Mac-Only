@@ -133,9 +133,9 @@ def Excel_Maker(metadata):
     base_dir = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(metadata[0]['File Path']))))
     
     directory = f"Analysis/{base_dir}/{day}"
-
     current_path = ""
     for part in directory.split(os.sep):
+        print(part)
         current_path = os.path.join(current_path, part)
         if not os.path.exists(current_path):
             os.mkdir(current_path)
@@ -187,7 +187,7 @@ def Excel_Maker(metadata):
 
     for j in range(len(metadata)):
         
-        print("File path: ", metadata[j]['File Path'], end='\n')
+        #print("File path: ", metadata[j]['File Path'], end='\n')
 
         artist_name.append(metadata[j]['Artist'])
         song_name.append(metadata[j]['File'])
@@ -199,56 +199,85 @@ def Excel_Maker(metadata):
 
         try:
             main_aa_ebu_max_momentary_loudness.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa ebu max momentary loudness'])
+        except KeyError:
+            main_aa_ebu_max_momentary_loudness.append("")
+        try:
             main_aa_ebu_top_of_loudness_range.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa ebu top of loudness range'])
+        except KeyError:
+            main_aa_ebu_top_of_loudness_range.append("")
+        try:
             main_aa_itu_sample_peak.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa itu sample peak'])
+        except KeyError:
+            main_aa_itu_sample_peak.append("")
+        try:
             main_aa_itu_true_peak.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa itu true peak'])
+        except KeyError:
+            main_aa_itu_true_peak.append("")
+        try:
             main_aa_ebu_max_short_term_loudness.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa ebu max short-term loudness'])
+        except KeyError:
+            main_aa_ebu_max_short_term_loudness.append("")
+        try:
             main_aa_ebu_loudness_range.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa ebu loudness range'])
+        except KeyError:
+            main_aa_ebu_loudness_range.append("")
+        try:
             main_aa_itu_loudness.append(metadata[j]['Loudness Info']['Main Loudness Parameters']['aa itu loudness'])
         except KeyError:
-
-            main_aa_ebu_max_momentary_loudness.append("")
-            main_aa_ebu_top_of_loudness_range.append("")
-            main_aa_itu_sample_peak.append("")
-            main_aa_itu_true_peak.append("")
-            main_aa_ebu_max_short_term_loudness.append("")
-            main_aa_ebu_loudness_range.append("")
             main_aa_itu_loudness.append("")
 
         try:
             album_aa_ebu_max_momentary_loudness.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu max momentary loudness', ""))
-            album_aa_ebu_top_of_loudness_range.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu top of loudness range', ""))
-            album_aa_itu_sample_peak.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu sample peak', ""))
-            album_aa_itu_true_peak.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu true peak', ""))
-            album_aa_ebu_max_short_term_loudness.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu max short-term loudness', ""))
-            album_aa_ebu_loudness_range.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu loudness range', ""))
-            album_aa_itu_loudness.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu loudness', ""))
-
         except KeyError:
             album_aa_ebu_max_momentary_loudness.append("")
+        try:
+            album_aa_ebu_top_of_loudness_range.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu top of loudness range', ""))
+        except KeyError:
             album_aa_ebu_top_of_loudness_range.append("")
+        try:
+            album_aa_itu_sample_peak.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu sample peak', ""))
+        except KeyError:
             album_aa_itu_sample_peak.append("")
+        try:
+            album_aa_itu_true_peak.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu true peak', ""))
+        except KeyError:
             album_aa_itu_true_peak.append("")
+        try:
+            album_aa_ebu_max_short_term_loudness.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu max short-term loudness', ""))
+        except KeyError:
             album_aa_ebu_max_short_term_loudness.append("")
+        try:
+            album_aa_ebu_loudness_range.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa ebu loudness range', ""))
+        except KeyError:
             album_aa_ebu_loudness_range.append("")
+        try:
+            album_aa_itu_loudness.append(metadata[j]['Loudness Info']['Album Loudness Parameters'].get('aa itu loudness', ""))
+        except KeyError:
             album_aa_itu_loudness.append("")
+
         try:
             sc_ave_perceived_power_coeff.append(metadata[j]['Loudness Info']['Sound Check Info']['sc ave perceived power coeff'])
-            sc_max_perceived_power_coeff.append(metadata[j]['Loudness Info']['Sound Check Info']['sc max perceived power coeff'])
-            sc_peak_amplitude_msec.append(metadata[j]['Loudness Info']['Sound Check Info']['sc peak amplitude msec'])
-            sc_max_perceived_power_msec.append(metadata[j]['Loudness Info']['Sound Check Info']['sc max perceived power msec'])
-            sc_peak_amplitude.append(metadata[j]['Loudness Info']['Sound Check Info']['sc peak amplitude'])
-
         except KeyError:
             sc_ave_perceived_power_coeff.append("")
+        try:
+            sc_max_perceived_power_coeff.append(metadata[j]['Loudness Info']['Sound Check Info']['sc max perceived power coeff'])
+        except KeyError:
             sc_max_perceived_power_coeff.append("")
+        try:
+            sc_peak_amplitude_msec.append(metadata[j]['Loudness Info']['Sound Check Info']['sc peak amplitude msec'])
+        except KeyError:
             sc_peak_amplitude_msec.append("")
+        try:
+            sc_max_perceived_power_msec.append(metadata[j]['Loudness Info']['Sound Check Info']['sc max perceived power msec'])
+        except KeyError:
             sc_max_perceived_power_msec.append("")
+        try:
+            sc_peak_amplitude.append(metadata[j]['Loudness Info']['Sound Check Info']['sc peak amplitude'])
+        except KeyError:
             sc_peak_amplitude.append("")
         
         try:
             sound_Check_volume_normalization_gain.append(metadata[j]['Sound Check Volume Normalization Gain'])
-
         except KeyError:
             sound_Check_volume_normalization_gain.append("")
 
@@ -325,6 +354,14 @@ def Excel_Maker(metadata):
         sheet.cell(row=i + 2, column=26, value=sc_peak_amplitude[i])
         sheet.cell(row=i + 2, column=27, value=sound_Check_volume_normalization_gain[i])
 
+        
+
+
+        
+        
+
+
+
     sheet.row_dimensions[1].height = 48
     sheet.column_dimensions['B'].width = 35
     sheet.column_dimensions['C'].width = 40
@@ -337,7 +374,7 @@ def Excel_Maker(metadata):
     print(f"{os.path.basename(file_path)} is saved in location {os.path.dirname(file_path)}")
         
 
-music_dir = input("Enter Music directory path: ")
+music_dir = input("Enter the Song Directory path: ")
 file_paths = glob.glob(f"{music_dir}/**/*.m4p", recursive=True)
 
 
@@ -348,3 +385,4 @@ for file in file_paths:
     dataframe.append(data)
 
 Excel_Maker(dataframe)
+#print(dataframe[13])
