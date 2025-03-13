@@ -15,7 +15,7 @@ This script extracts metadata from audio files using `afinfo` and saves the data
 - Python 3.x
 - `openpyxl` for Excel file handling
 - `numpy` for data handling
-- 'glob' for file path applications
+- `glob` for file path applications
 
 ## Installation
 1. Open terminal in desired location
