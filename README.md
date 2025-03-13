@@ -22,7 +22,7 @@ This script extracts metadata from audio files using `afinfo` and saves the data
 git clone git@github.com:swarajvee/Audio-Metadata-Extractor-Mac-Only.git
 cd Audio-Metadata-Extractor-Mac-Only
 ```
-4. Install required python packages
+3. Install required python packages
 ```bash
 pip install -r requirements.txt
 ```
