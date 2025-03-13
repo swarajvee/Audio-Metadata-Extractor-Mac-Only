@@ -1,0 +1,5 @@
+glob2
+openpyxl
+numpy
+
+#pip install -r requirements.txt

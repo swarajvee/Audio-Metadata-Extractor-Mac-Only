@@ -1,0 +1,32 @@
+### File Information  
+- **File**: The name of the audio file.  
+- **Artist**: The artist or performer of the song.  
+- **File Type**: The format of the file (e.g., M4A, MP3, WAV).  
+- **Duration**: The total playback time of the audio file.  
+- **Bit Rate (bps)**: The number of bits per second used for encoding the file (higher values mean better audio quality).  
+- **Channel Layout**: The audio channel configuration (e.g., Stereo, Mono, Surround).  
+
+### Loudness and Peak Measurements  
+- **Main aa EBU Loudness Range**: The dynamic range of the track based on EBU (European Broadcasting Union) standards, indicating how much the volume varies.  
+- **Main aa EBU Max Momentary Loudness**: The loudest short peak within a very brief time window (400ms), measured using EBU standards.  
+- **Main aa EBU Max Short-Term Loudness**: The highest average loudness over a 3-second window, based on EBU guidelines.  
+- **Main aa EBU Top of Loudness Range**: The loudest value in the track’s loudness range using EBU standards.  
+- **Main aa ITU Loudness**: The integrated loudness of the track as per ITU (International Telecommunication Union) standards, indicating overall perceived volume.  
+- **Main aa ITU Sample Peak**: The highest digital sample value found in the track, without considering interpolation.  
+- **Main aa ITU True Peak**: The estimated peak loudness when reconstructed in an analog system, which accounts for inter-sample peaks.  
+
+### Album Loudness (Aggregated Across Tracks)  
+- **Album aa EBU Loudness Range**: The dynamic range of the entire album based on EBU standards.  
+- **Album aa EBU Max Momentary Loudness**: The highest peak loudness within a short window across the album (similar to per-track, but averaged over all tracks).  
+- **Album aa EBU Max Short-Term Loudness**: The highest 3-second average loudness in the album.  
+- **Album aa EBU Top of Loudness Range**: The highest value of the album’s loudness range.  
+- **Album aa ITU Loudness**: The overall loudness of the album using ITU standards.  
+- **Album aa ITU Sample Peak**: The highest digital sample peak value across the entire album.  
+- **Album aa ITU True Peak**: The estimated highest loudness value of the album when converted to analog.  
+
+### Sound Check Data (Apple's Volume Normalization System)  
+- **Sound Check sc Ave Perceived Power Coeff**: The average perceived loudness power coefficient used by Apple Sound Check to normalize playback volume.  
+- **Sound Check sc Max Perceived Power Coeff**: The highest power coefficient Apple Sound Check detected for volume normalization.  
+- **Sound Check sc Max Perceived Power Msec**: The time in milliseconds at which the maximum perceived power occurs in the track.  
+- **Sound Check sc Peak Amplitude**: The highest amplitude (volume level) detected in the track.  
+- **Sound Check sc Peak Amplitude Msec**: The exact millisecond when the peak amplitude occurs.  
