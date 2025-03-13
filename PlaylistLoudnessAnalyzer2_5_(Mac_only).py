@@ -325,14 +325,6 @@ def Excel_Maker(metadata):
         sheet.cell(row=i + 2, column=26, value=sc_peak_amplitude[i])
         sheet.cell(row=i + 2, column=27, value=sound_Check_volume_normalization_gain[i])
 
-        
-
-
-        
-        
-
-
-
     sheet.row_dimensions[1].height = 48
     sheet.column_dimensions['B'].width = 35
     sheet.column_dimensions['C'].width = 40
