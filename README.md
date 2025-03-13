@@ -13,7 +13,7 @@ This script extracts metadata from audio files using `afinfo` and saves the data
 - Python 3.x
 - `openpyxl` for Excel file handling
 - `numpy` for data handling
-- glob for file path applications
+- 'glob' for file path applications
 
 ## Installation
 1. Open terminal in desired location
@@ -60,6 +60,7 @@ An example row in the output Excel file:
 | 1 | Ado | 01 Show | Show - Single | 3.16 | 44100 Hz | 16 bit | 0.25 | -1.75 | 0 | 1.9375 | -1.25 | 4.75 | -3.75 | 0.25 | -1.75 | 0 | 1.9375 | -1.25 | 4.75 | -3.75 | "21737 22205" | "96187 116789" | "627 395" | "183298 98522" | "32768 32768" | -12.25 dB |
 
 ## Notes
+- There will be a `info.txt` file which can provide explanation to some of the Loudness parameters
 - The script is tested in m4p files in mac os Ventura, but can be modified if ```afinfo "path/to/song.extension"``` can give any song metadata
 - Ensure `afinfo` is available in your system's PATH.
 
