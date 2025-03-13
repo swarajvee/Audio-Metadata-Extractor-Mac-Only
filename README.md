@@ -13,12 +13,16 @@ This script extracts metadata from audio files using `afinfo` and saves the data
 - Python 3.x
 - `openpyxl` for Excel file handling
 - `numpy` for data handling
+- glob for file path applications
 
 ## Installation
-Ensure you have Python installed and install the required dependencies using:
-```bash
-pip install openpyxl numpy
-```
+1. Open terminal in desired location
+2. Download this repository using the command
+  ```git clone git@github.com:swarajvee/Audio-Metadata-Extractor-Mac-Only.git'''
+3. change directory to the downloaded github repo
+  ```cd Audio-Metadata-Extractor-Mac-Only```
+4. Install required python packages
+  ```pip install -r requirements.txt```
 
 ## Usage
 1. Place the downloaded tracks under one directory (eg: directory with the name of the playlist).
