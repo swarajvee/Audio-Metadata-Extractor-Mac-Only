@@ -85,7 +85,7 @@ def parsed_data(af_out):
 
         if "Loudness Info:" in line:
             Loudness_Info = {}
-            i += 1  # Move to next line
+            i += 1
 
             while i < len(lines):
                 line = lines[i].strip()
